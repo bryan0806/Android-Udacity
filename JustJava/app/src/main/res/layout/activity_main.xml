@@ -17,13 +17,26 @@
         android:paddingLeft="16dp"
         />
 
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        android:textAllCaps="true"
+        android:onClick="increment"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="0"
         android:paddingLeft="16dp"
-        android:paddingBottom="16dp"
         android:id="@+id/quantity_text_view"/>
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        android:textAllCaps="true"
+        android:onClick="decrement"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,7 +44,6 @@
         android:text="Price"
         android:textAllCaps="true"
         android:paddingBottom="16dp"
-        android:paddingTop="16dp"
         android:paddingLeft="16dp"
         />
 

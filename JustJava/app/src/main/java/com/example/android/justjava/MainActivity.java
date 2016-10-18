@@ -34,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
         displayPrice(numberOfCoffees*5);
     }
 
+    public void increment(View view){
+        display(3);
+    }
+
+    public void decrement(View view){
+        display(1);
+    }
+
     /**
      * This method displays the given quantity value on the screen.
      */
