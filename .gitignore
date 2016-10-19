@@ -1,0 +1,5 @@
+
+#ignore build file
+JustJava/.idea/
+#backup for old version
+JustJava/projectFilesBackup/
