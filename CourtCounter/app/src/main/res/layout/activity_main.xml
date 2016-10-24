@@ -24,7 +24,8 @@
         android:text="0"
         android:padding="5dp"
         android:textSize="10dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:id="@+id/team_a_score"/>
     
     <Button
         android:layout_width="match_parent"
@@ -33,7 +34,8 @@
         android:textAllCaps="true"
         android:layout_gravity="center"
         android:textSize="8dp"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:onClick="threepoint"/>
 
     <Button
         android:layout_width="match_parent"
@@ -42,7 +44,8 @@
         android:textAllCaps="true"
         android:layout_gravity="center"
         android:textSize="8dp"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:onClick="twopoint"/>
 
     <Button
         android:layout_width="match_parent"
@@ -51,7 +54,8 @@
         android:textAllCaps="true"
         android:layout_gravity="center"
         android:textSize="8dp"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:onClick="freeThrow"/>
 
 
 
