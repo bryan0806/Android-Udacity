@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:onClick="threepoint"
+            android:onClick="teamB_threepoint"
             android:text="+3 Points"
             android:textAllCaps="true"
             android:textSize="8dp" />
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:onClick="twopoint"
+            android:onClick="teamB_twopoint"
             android:text="+2 Points"
             android:textAllCaps="true"
             android:textSize="8dp" />
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:onClick="freeThrow"
+            android:onClick="teamB_freeThrow"
             android:text="FREE THROW"
             android:textAllCaps="true"
             android:textSize="8dp" />
