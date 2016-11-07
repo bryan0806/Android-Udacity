@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = numberOfCoffees *5;
+        int price = calculatePrice();
         String priceMessage = "Total: $" + price + "\nThank you!";
         display(numberOfCoffees);
         //displayPrice(priceMessage);
@@ -72,5 +72,10 @@ public class MainActivity extends AppCompatActivity {
     private void displayMessage(String message) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
+    }
+
+    private int calculatePrice(){
+        int price = numberOfCoffees * 5;
+        return price;
     }
 }
