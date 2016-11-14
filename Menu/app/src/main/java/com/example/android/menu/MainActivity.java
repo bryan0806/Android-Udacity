@@ -21,8 +21,12 @@ public class MainActivity extends AppCompatActivity {
         String menuItem1 = textViewItem1.getText().toString();
         Log.v("MainActivity", menuItem1);
         // Find second menu item TextView and print the text to the logs
-
+        TextView textViewItem2 = (TextView) findViewById(R.id.menu_item_2);
+        String menuItem2 = textViewItem2.getText().toString();
+        Log.v("MainActivity", menuItem2);
         // Find third menu item TextView and print the text to the logs
-
+        TextView textViewItem3 = (TextView) findViewById(R.id.menu_item_3);
+        String menuItem3 = textViewItem1.getText().toString();
+        Log.v("MainActivity", menuItem3);
     }
 }
