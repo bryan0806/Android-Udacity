@@ -8,7 +8,9 @@ package com.example.android.justjava;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -33,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         int price = calculatePrice();
+        CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream);
+        Boolean hasWhippedCream = whippedCream.isChecked();
+        Log.v("MainActivity", "Has the whipped cream: "+ hasWhippedCream);
+
+
         String priceMessage = createOrderSummary(price);
         display(numberOfCoffees);
         //displayPrice(priceMessage);
