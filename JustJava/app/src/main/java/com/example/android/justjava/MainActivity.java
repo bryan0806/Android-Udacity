@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     int numberOfCoffees = 0;
+    Boolean hasWhippedCream = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         int price = calculatePrice();
         CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream);
-        Boolean hasWhippedCream = whippedCream.isChecked();
+        hasWhippedCream = whippedCream.isChecked();
         Log.v("MainActivity", "Has the whipped cream: "+ hasWhippedCream);
 
 
-        String priceMessage = createOrderSummary(price);
+        String priceMessage = createOrderSummary(price,hasWhippedCream);
         display(numberOfCoffees);
         //displayPrice(priceMessage);
         displayMessage(priceMessage);
@@ -79,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
         return price;
     }
 
-    private String createOrderSummary(int priceOfOrder){
-        String orderSummary = "Name: Kaptain Kunal\n" + "Quantity: " + numberOfCoffees + "\nTotal: " + priceOfOrder
+    private String createOrderSummary(int priceOfOrder,Boolean hasWhippedCream){
+        String orderSummary = "Name: Kaptain Kunal\n" + "Has the whipped cream: "+ hasWhippedCream + "\nQuantity: " + numberOfCoffees + "\nTotal: " + priceOfOrder
  + "\nThank you!";
         return orderSummary;
     }
