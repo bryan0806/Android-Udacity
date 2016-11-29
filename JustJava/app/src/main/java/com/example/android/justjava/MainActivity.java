@@ -6,6 +6,7 @@
  */
 package com.example.android.justjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -51,7 +52,17 @@ public class MainActivity extends AppCompatActivity {
         String priceMessage = createOrderSummary(price,hasWhippedCream,hasChocolate,username);
         display(numberOfCoffees);
         //displayPrice(priceMessage);
-        displayMessage(priceMessage);
+        //displayMessage(priceMessage);
+        String subjectMessage = "Coffee Order from " + username;
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("*/*");
+        //intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subjectMessage);
+        intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
+        //intent.putExtra(Intent.EXTRA_STREAM, attachment);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     public void increment(View view){
