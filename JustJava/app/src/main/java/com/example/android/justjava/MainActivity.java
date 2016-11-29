@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 
@@ -54,14 +55,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void increment(View view){
-
         numberOfCoffees += 1;
-        display(numberOfCoffees);
+        if(numberOfCoffees > 100){
+            numberOfCoffees = 100;
+            display(numberOfCoffees);
+            Toast.makeText(this, "Order number can not be over 100 !", Toast.LENGTH_SHORT).show();
+        }else {
+
+            display(numberOfCoffees);
+        }
     }
 
     public void decrement(View view){
         numberOfCoffees -= 1;
-        display(numberOfCoffees);
+        if(numberOfCoffees < 1 ){
+            numberOfCoffees = 1;
+            display(numberOfCoffees);
+            Toast.makeText(this, "Order number can not be less than 1 !", Toast.LENGTH_SHORT).show();
+        }else {
+            display(numberOfCoffees);
+        }
     }
 
     /**
