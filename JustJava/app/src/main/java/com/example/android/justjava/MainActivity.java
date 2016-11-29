@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
         EditText name_field = (EditText) findViewById(R.id.name_edit);
         String username = name_field.getText().toString();
 
-        int price = calculatePrice();
+
         CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream);
         CheckBox chocolate = (CheckBox) findViewById(R.id.chocolate);
         boolean hasWhippedCream = whippedCream.isChecked();
         boolean hasChocolate = chocolate.isChecked();
         //Log.v("MainActivity", "Has the whipped cream: "+ hasWhippedCream);
 
-
+        int price = calculatePrice(hasWhippedCream,hasChocolate);
         String priceMessage = createOrderSummary(price,hasWhippedCream,hasChocolate,username);
         display(numberOfCoffees);
         //displayPrice(priceMessage);
@@ -81,8 +81,16 @@ public class MainActivity extends AppCompatActivity {
         orderSummaryTextView.setText(message);
     }
 
-    private int calculatePrice(){
-        int price = numberOfCoffees * 5;
+    private int calculatePrice(boolean addCream,boolean addChocolate){
+        int price0fEachCup = 5;
+        if(addCream){
+            price0fEachCup += 1;
+        }
+        if(addChocolate){
+            price0fEachCup +=2;
+        }
+
+        int price = numberOfCoffees * price0fEachCup;
         return price;
     }
 
@@ -91,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
      * @param priceOfOrder : price of the order
      * @param addWhippedCream : add whipped cream or not
      * @param addChocolate : add chocolate or not
+     *                     @param name      foruser
+     *
      * @return : order Summary text
      */
 
