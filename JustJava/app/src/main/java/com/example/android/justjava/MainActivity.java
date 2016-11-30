@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String createOrderSummary(int priceOfOrder,Boolean addWhippedCream,boolean addChocolate,String nameforuser){
-        String orderSummary = getString(R.string.order_summary_name,nameforuser)  + "\n" + "Has the whipped cream: "+ addWhippedCream + "\nAdd Chocolate ?" + addChocolate + "\nQuantity: " + numberOfCoffees + "\nTotal: " + priceOfOrder
+        String orderSummary = getString(R.string.order_summary_name, nameforuser)/*目前這樣改似乎改成中文或日文時候 會得不到user輸入的名稱 不知道為何*/  + "\n" + "Has the whipped cream: "+ addWhippedCream + "\nAdd Chocolate ?" + addChocolate + "\nQuantity: " + numberOfCoffees + "\nTotal: " + priceOfOrder
  + "\n" + getString(R.string.thank_you);
         return orderSummary;
     }
