@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">JustJava</string>
+    <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
+    <string name="hint_name">Name</string>
+
+    <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
+    <string name="toppings">Toppings</string>
+
+    <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
+    <string name="quantity">Quantity</string>
+
+    <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
+    <string name="order_summary">Order Summary</string>
+
+    <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
+    <string name="order">Order</string>
+
+    <string name="thank_you">Thank you!</string>
+
 </resources>
