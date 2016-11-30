@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String createOrderSummary(int priceOfOrder,Boolean addWhippedCream,boolean addChocolate,String nameforuser){
-        String orderSummary = getString(R.string.hint_name) + ": " + nameforuser + "\n" + "Has the whipped cream: "+ addWhippedCream + "\nAdd Chocolate ?" + addChocolate + "\nQuantity: " + numberOfCoffees + "\nTotal: " + priceOfOrder
+        String orderSummary = getString(R.string.order_summary_name,nameforuser)  + "\n" + "Has the whipped cream: "+ addWhippedCream + "\nAdd Chocolate ?" + addChocolate + "\nQuantity: " + numberOfCoffees + "\nTotal: " + priceOfOrder
  + "\n" + getString(R.string.thank_you);
         return orderSummary;
     }
