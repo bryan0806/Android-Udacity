@@ -10,23 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.homecamera.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView" />
-
-    <Button
-        android:text="Run"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="59dp"
-        android:layout_marginStart="59dp"
-        android:id="@+id/button"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Exit"
         android:layout_width="wrap_content"
@@ -37,4 +20,25 @@
         android:layout_marginRight="50dp"
         android:layout_marginEnd="50dp"
         android:id="@+id/button2" />
+
+    <Button
+        android:text="Run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@+id/buttonforlive"
+        android:layout_alignLeft="@+id/buttonforlive"
+        android:layout_alignStart="@+id/buttonforlive" />
+
+    <Button
+        android:text="Live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp"
+        android:id="@+id/buttonforlive"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="160dp" />
 </RelativeLayout>

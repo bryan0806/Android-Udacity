@@ -2,6 +2,8 @@ package com.example.android.homecamera;
 
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 
@@ -35,11 +37,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
        //final String[] message = new String[1];
-        //Button btn = (Button) findViewById(R.id.button);
-        //Button exit = (Button) findViewById(R.id.button2);
+        Button btn = (Button) findViewById(R.id.button);
+        Button exit = (Button) findViewById(R.id.button2);
+        Button live = (Button) findViewById(R.id.buttonforlive);
 
-        //btn.setOnClickListener(new View.OnClickListener() {
-            //public void onClick(View v) {
+        btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 new AsyncTask<Integer,Void,Void>(){
                     @Override
                     protected Void doInBackground(Integer... params){
@@ -55,15 +58,25 @@ public class MainActivity extends Activity {
                     }
                 }.execute(1);
        // Toast.makeText(MainActivity.this, message[0],Toast.LENGTH_LONG).show();
-           // }
-        //});
+            }
+        });
 
-       //exit.setOnClickListener(new View.OnClickListener() {
-           //@Override
-           // public void onClick(View v) {
-                //System.exit(0);
-           // }
-       // });
+       exit.setOnClickListener(new View.OnClickListener() {
+           @Override
+            public void onClick(View v) {
+                System.exit(0);
+            }
+        });
+
+        live.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                String url = "http://1.34.74.162:8081";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
 
     }
 
@@ -90,7 +103,7 @@ public class MainActivity extends Activity {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         channelssh.setOutputStream(baos);
 
-        channelssh.setCommand("df > /home/osmc/test2.txt");
+        channelssh.setCommand("df > /home/osmc/test3.txt");
         channelssh.connect();
 
 
